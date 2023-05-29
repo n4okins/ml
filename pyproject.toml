@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "ml"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.11"
+
+torch = [
+    {path = "/wheels/torch-2.0.1+cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torch-2.0.1+cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torch-spline-conv = [
+    {path = "/wheels/torch_spline_conv-1.2.2+pt20cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torch_spline_conv-1.2.2+pt20cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torchaudio = [
+    {path = "/wheels/torchaudio-2.0.2+cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torchaudio-2.0.2+cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torchvision = [
+    {path = "/wheels/torchvision-0.15.2+cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torchvision-0.15.2+cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torch-cluster = [
+    {path = "/wheels/torch_cluster-1.6.1+pt20cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torch_cluster-1.6.1+pt20cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torch-scatter = [
+    {path = "/wheels/torch_scatter-2.1.1+pt20cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torch_scatter-2.1.1+pt20cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+torch-sparse = [
+    {path = "/wheels/torch_sparse-0.6.17+pt20cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"},
+    {path = "/wheels/torch_sparse-0.6.17+pt20cu117-cp310-cp310-win_amd64.whl", markers = "python_version == '3.10' and sys_platform == 'win32'"},
+]
+
+pyg-lib = {path = "/wheels/pyg_lib-0.2.0+pt20cu117-cp310-cp310-linux_x86_64.whl", markers = "python_version == '3.10' and sys_platform == 'linux'"}
+torch-geometric = "^2.3.1"
+torchinfo = "^1.8.0"
+optuna = "^3.1.1"
+matplotlib = "^3.7.1"
+plotly = "^5.14.1"
+seaborn = "^0.12.2"
+jupyter = "^1.0.0"
+jupyterlab = "^4.0.0"
+pillow = "^9.5.0"
+opencv-python = "^4.7.0.72"
+scikit-learn = "^1.2.2"
+scikit-image = "^0.20.0"
+kornia = "^0.6.12"
+opencv-contrib-python = "^4.7.0.72"
+packaging = "^23.1"
+imageio-ffmpeg = "^0.4.8"
+transformers = {extras = ["torch"], version = "^4.29.2"}
+huggingface-hub = {extras = ["cli", "torch"], version = "^0.14.1"}
+setuptools = "^67.8.0"
+wheel = "^0.40.0"
+ninja = "^1.11.1"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
